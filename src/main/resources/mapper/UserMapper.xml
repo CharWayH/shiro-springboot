@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--对应mapper类的位置-->
+<mapper namespace="com.charwayh.shirospringboot.mapper.UserMapper">
+    <!--mapper对应的方法名-->
+    <!--根据用户名查询用户-->
+    <select id="queryUserByName" parameterType="String" resultType="com.charwayh.shirospringboot.pojo.User">
+        select * from User where username=#{name};
+    </select>
+</mapper>
